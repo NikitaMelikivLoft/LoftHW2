@@ -2,8 +2,7 @@
 /**
  * Class Базового тарифа
  */
-class BasicTariff extends TariffAbstract implements TarifInterface{
-    use DriverTrait;
+class BasicTariff extends TariffAbstract {
 
     protected function tariffPriceKilometer()
     {
@@ -16,8 +15,8 @@ class BasicTariff extends TariffAbstract implements TarifInterface{
     }
 
     public function sum($distance, $time, $gps = false, $driver = false)
-    {   $gps ? $gps = $this->GpsTime($time) : $gps=false;
-        $driver ? $driver = $this->driver() : $driver = false;
-        return parent::sum($distance, $time, $age, $gps, $driver);
+    {
+        echo "Тариф 'Базовый'</br>";
+        return parent::sum($distance, $time, $gps, $driver);
     }
 }

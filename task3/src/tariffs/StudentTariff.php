@@ -3,10 +3,8 @@
 /**
  * Тариф Студенчиский
  */
-class StudentTariff extends TariffAbstract implements TarifInterface
+class StudentTariff extends TariffAbstract
 {
-    use DriverTrait;
-
     protected function tariffPriceKilometer()
     {
         return 4;
@@ -19,8 +17,7 @@ class StudentTariff extends TariffAbstract implements TarifInterface
 
     public function sum($distance, $time, $gps = false, $driver = false)
     {
-        $gps ? $gps = $this->GpsTime($time) : $gps=false;
-        $driver ? $driver = $this->driver() : $driver = false;
-        return parent::sum($distance, $time, $age, $gps, $driver);
+        echo "Тариф 'Студенчиский'</br>";
+        return parent::sum($distance, $time, $gps, $driver);
     }
 }

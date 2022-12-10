@@ -9,6 +9,7 @@ trait DriverTrait
 
     public function driver()
     {
+        echo "Вы взяли доп. услугу: Водитель</br>";
         return $this->driver;
     }
 }

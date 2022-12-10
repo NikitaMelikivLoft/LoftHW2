@@ -5,9 +5,8 @@
  */
 trait TimeTrait
 {
-    public function HourlyTime($time)
+    public function hourlyTime($time)
     {
-
         $time = ceil($time / 60);
         return $time;
     }
